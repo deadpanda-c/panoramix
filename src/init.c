@@ -36,6 +36,7 @@ void init(villager_t **villagers, druid_t *druid, pano_t *pano, char **av)
     init_druid(druid, av);
     init_pano(pano, av);
     init_villagers(villagers, av, pano);
+    are_value_valid(*villagers, *druid, *pano);
     print_villagers(*villagers, pano->nb_villagers);
     print_druid(*druid);
     print_pano(*pano);
