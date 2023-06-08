@@ -5,10 +5,12 @@
 ** don't forget to free at the end
 */
 
-#include "my.h"
+#include "panoramix.h"
 
-int main(void)
+int main(int ac, char **av)
 {
-    printf("Hello World\n");
-    return 0;
+    (void)av;
+    if (ac != 5)
+        usage(84);
+    return start_panoramix(av);
 }
